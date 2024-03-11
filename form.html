@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms in html</title>
+</head>
+<body>
+    <form action="scripts/data.php" method="post" enctype="multipart/form-data">
+        <label for="">Name:</label>
+        <input type="text" name="student_name" id="student_name">
+        <br>
+        <label for="email">Email:</label>
+        <input type="email" name="email_address" id="email_address">
+        <br>
+        <!--textarea alows multiple line input-->
+        <br>
+        <textarea name="bio" id="bio" cols="35" rows="25">
+            Please enter your data here
+        </textarea>
+        <!--fieldset is used to group related elements-->
+        <fieldset>
+                 <!--textbox used when you want to choose more than 1 element-->
+        <input type="checkbox" name="math" id="math" value="Math">
+        <label for="math">Math</label>
+        <br>
+        <input type="checkbox" name="english" id="english" value="english">
+        <label for="english">English</label>
+        <br>
+        <input type="checkbox" name="science" id="science" value="science">
+        <label for="science">Science</label>
+        </fieldset>
+        <fieldset>
+            <legend>Gender</legend>
+            <input type="radio" name="gender" id="male" value="male">
+            <label for="male">Male</label>
+            <input type="radio" name="gender" id="female" value="female">
+            <label for="female">Female</label>
+        </fieldset>
+        <!--we use select box if we want to have a drop down where you can allow multiple attribute selection,therefore add multiple -->
+        <label for="classes">Classes</label>
+        <select name="classes" id="classes" multiple>
+            <option value="">Select your preffered class</option>
+            <option value="">Physical</option>
+            <option value="">Virtual</option>
+        </select>
+        <br>
+        <label for="">Passport Photo:</label>
+        <input type="file" id="passport_photo" name="passport_photo" accept="images/*">
+        <!--To restrict the type of file allowed use the acccept attribute-->
+        <br>
+        <input type="button" id="btn_ok" name="btn_ok" value="OK!" onclick="">
+        <!--reset button resets to default-->
+        <br>
+        <input type="reset" id="clear" name="Clear Form" value="Clear Form">
+        <input type="submit" id="submit" name="submit" value="Register">
+
+
+
+
+
+
+
+    </form>
+    
+</body>
+</html>
